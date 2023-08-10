@@ -1,15 +1,18 @@
 <div class="task-groups-container">
     <div class="task-group" style="background-color: rgb(214, 140, 140);">
+        <label>Incomplete</label>
         <ng-container *ngFor="let task of tasks">
             <app-task *ngIf="task.status === 'incomplete'" [task]="task"></app-task>
         </ng-container>
     </div>
     <div class="task-group" style="background-color: rgb(129, 188, 109);">
+        <label>Complete</label>
         <ng-container *ngFor="let task of tasks">
             <app-task *ngIf="task.status === 'complete'" [task]="task"></app-task>
         </ng-container>
     </div>
     <div class="task-group" style="background-color: rgb(119, 143, 181);">
+        <label>Archived</label>
         <ng-container *ngFor="let task of tasks">
             <app-task *ngIf="task.status === 'archived'" [task]="task"></app-task>
         </ng-container>

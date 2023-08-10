@@ -20,3 +20,12 @@
     overflow: auto;
     gap: 0.5em;
 }
+
+label 
+{
+    color: var(--text);
+    align-self: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 0.5em 0;
+}

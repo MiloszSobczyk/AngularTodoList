@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const app = express();
 const PORT = 8080;
 require('dotenv/config');
@@ -12,6 +13,8 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     next();
 });
+
+app.use(cors());
 
 // Import Routes
 const tasksRoute = require('./routes/tasks');

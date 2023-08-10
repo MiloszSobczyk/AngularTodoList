@@ -50,12 +50,16 @@ export class TaskService {
   }
 
   async updateTask(task: Task) {
-    this.http.patch<Task>(`http://localhost:8080/tasks/${task._id}`, task);
+    const headers = { 'content-type': 'application/json'}
+    const body = JSON.stringify(task);
+    this.http.patch<Task>(`http://localhost:8080/tasks/${task._id}`, body, { 'headers': headers }).subscribe();
     console.log(task);
   }
 
   async addTask(task: Task) {
-    this.http.patch<Task>(`http://localhost:8080/tasks/${task._id}`, task);
+    const headers = { 'content-type': 'application/json'}
+    const body = JSON.stringify(task);
+    this.http.post<Task>(`http://localhost:8080/tasks`, body, { 'headers': headers }).subscribe();
     this.tasks.push(task);
     console.log(task);
   }
