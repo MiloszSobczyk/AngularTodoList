@@ -8,10 +8,9 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class TaskService {
-  @Input() task = null;
-
   currentUser: String = '64d37019b0f79eecda36fbde'
   authorized: boolean = false;
+  tasks: Task[] = [];
   constructor(private readonly http: HttpClient) { }
 
   async getAllTasks(): Promise<Task[]> {
@@ -20,6 +19,17 @@ export class TaskService {
     );
     console.log(response);
     return response;
+  }
+  
+  async returnTasks() {
+    this.tasks = await this.getAllTasks();
+    return this.tasks;
+  }
+
+  async updateTask(task: Task){
+    const updatedFields = { title: task.title, description: task.description, status: task.status }
+    this.http.patch<Task>(`http://localhost:8080/tasks/${task._id}`, task);
+    console.log(task);
   }
 
   authorizeUser(inputPassword: String): Promise<boolean> {
@@ -37,4 +47,5 @@ export class TaskService {
         });
     });
   }
+
 }

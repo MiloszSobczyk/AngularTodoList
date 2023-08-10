@@ -1,12 +1,12 @@
 <div>
     <div class="task-top">
-        <div class="task-top--text">Pierwszy task</div>
+        <div class="task-top--text">{{ task.title }}</div>
         <div class="task-top--buttons-container">
-            <button class="task-top--button-gray"></button>
-            <button class="task-top--button-red"></button>
-            <button class="task-top--button-green"></button>
-            <button class="task-top--button-blue"></button>
+            <button class="task-top--button-gray" (click)="editTask()"></button>
+            <button class="task-top--button-red" (click)="moveTask('incomplete')"></button>
+            <button class="task-top--button-green" (click)="moveTask('complete')"></button>
+            <button class="task-top--button-blue" (click)="moveTask('archived')"></button>
         </div>
     </div>
-    <div class="task-bottom">Jego opis</div>
+    <div class="task-bottom">{{ task.title }}</div>
 </div>

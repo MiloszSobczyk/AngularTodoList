@@ -14,6 +14,6 @@ export class TaskGroupsComponent implements OnInit {
   constructor(private readonly taskService: TaskService) { }
 
   async ngOnInit() {
-    this.tasks = await this.taskService.getAllTasks();
+    this.tasks = await this.taskService.returnTasks();
   }
 }

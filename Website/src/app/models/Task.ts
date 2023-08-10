@@ -3,7 +3,6 @@ export interface Task {
     userId: String;
     title: String;
     description: String;
-    completion: String;
     status: String;
     _v: number;
 }
