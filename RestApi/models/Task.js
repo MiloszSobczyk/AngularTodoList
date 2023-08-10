@@ -14,16 +14,11 @@ const TaskSchema = mongoose.Schema({
             type: String,
             default: '',
         },
-        completion: {
-            type: String,
-            enum: ['complete', 'incomplete'],
-            default: 'incomplete',
-        },
         status: {
             type: String,
-            enum: ['active', 'archived'],
-            default: 'active',
-        },
+            enum: ['complete', 'incomplete', 'archived'],
+            default: 'incomplete',
+        }
     }
 );
 

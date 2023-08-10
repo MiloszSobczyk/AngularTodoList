@@ -16,4 +16,8 @@ export class TaskGroupsComponent implements OnInit {
   async ngOnInit() {
     this.tasks = await this.taskService.returnTasks();
   }
+
+  onClick(completion: String) {
+    this.taskService.switchCreatePrompt();
+  }
 }

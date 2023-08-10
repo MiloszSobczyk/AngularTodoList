@@ -1,11 +1,11 @@
-<div class="task-editor--blur">
-    <div class="task-editor">
-        <form class="task-editor--fields" [formGroup]="taskForm" (ngSubmit)="onSubmit()">
+<div class="task-creator--blur">
+    <div class="task-creator">
+        <form class="task-creator--fields" [formGroup]="taskForm" (ngSubmit)="onSubmit()">
             <label for="title">Title:</label>
             <textarea class="field title" type="text" id="title" formControlName="title"></textarea>
             <label for="description">Description:</label>
             <textarea class="field" type="text" id="description" formControlName="description"></textarea>
-            <button class="submit-button" type="submit" (click)="onSubmit()">Save changes</button>
+            <button class="submit-button" type="submit" (click)="onSubmit()">Create task</button>
         </form>
     </div>
 </div>

@@ -1,0 +1,30 @@
+.button-div
+{
+    display: flex;
+    justify-content: center;
+    background-color: var(--background);
+}
+
+.create-button 
+{
+    align-self: center;
+    margin: 0.5em 0 0 0;
+    width: 15%;
+    background-color: var(--accent);
+    color: var(--text);
+    border: none;
+    border-radius: 1em;
+    padding: 4px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.create-button:hover
+{
+    background-color: var(--text);
+    color: var(--accent);
+}

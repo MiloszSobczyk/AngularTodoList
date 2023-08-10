@@ -12,6 +12,29 @@ export class TaskService {
   authorized: boolean = false;
   tasks: Task[] = [];
   constructor(private readonly http: HttpClient) { }
+  chosenTask: Task | null = null;
+  editPrompt: boolean = false;
+  createPrompt: boolean = false;
+
+  switchEditPrompt() {
+    this.editPrompt = !this.editPrompt;
+  }
+
+  getEditPrompt() {
+    return this.editPrompt;
+  }
+
+  switchCreatePrompt() {
+    this.createPrompt = !this.createPrompt;
+  }
+
+  getCreatePrompt() {
+    return this.createPrompt;
+  }
+  
+  getUserId() {
+    return this.currentUser;
+  }
 
   async getAllTasks(): Promise<Task[]> {
     const response = await firstValueFrom(
@@ -26,9 +49,14 @@ export class TaskService {
     return this.tasks;
   }
 
-  async updateTask(task: Task){
-    const updatedFields = { title: task.title, description: task.description, status: task.status }
+  async updateTask(task: Task) {
     this.http.patch<Task>(`http://localhost:8080/tasks/${task._id}`, task);
+    console.log(task);
+  }
+
+  async addTask(task: Task) {
+    this.http.patch<Task>(`http://localhost:8080/tasks/${task._id}`, task);
+    this.tasks.push(task);
     console.log(task);
   }
 
@@ -46,6 +74,10 @@ export class TaskService {
           reject(error);
         });
     });
+  }
+
+  setChosenTask(task: Task | null) {
+    this.chosenTask = task;
   }
 
 }

@@ -1,4 +1,4 @@
-.task-editor--blur
+.task-creator--blur
 {
     position: absolute;
     top: 0;
@@ -13,7 +13,7 @@
     backdrop-filter: blur(3px);
 }
 
-.task-editor
+.task-creator
 {
     width: 50%;
     height: 40%;
@@ -23,7 +23,7 @@
     color: var(--text);
 }
 
-.task-editor--fields
+.task-creator--fields
 {
     display: flex;
     flex-direction: column;

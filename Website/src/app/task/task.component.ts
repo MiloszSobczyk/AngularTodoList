@@ -18,6 +18,8 @@ export class TaskComponent {
 	}
 
 	editTask(): void {
-		this.router.navigate(['/edit'])
+		this.taskService.setChosenTask(this.task);
+		this.taskService.switchEditPrompt();
+		// this.router.navigate(['/edit']);
 	}
 }

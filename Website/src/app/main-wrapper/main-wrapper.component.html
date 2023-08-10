@@ -1,2 +1,7 @@
 <app-header></app-header>
+<div class="button-div">
+    <button class="create-button" (click)="switchCreatePrompt()">Create task</button>
+</div>
 <app-task-groups></app-task-groups>
+<app-task-editor *ngIf="getEditPrompt()"></app-task-editor>
+<app-task-creator *ngIf="getCreatePrompt()"></app-task-creator>
