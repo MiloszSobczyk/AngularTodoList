@@ -2,13 +2,24 @@
 ## Description
 Task manager is a program to manage your tasks allowing you to add new ones, edit them and change their status. It has integration with API, that allows you to resume your work on other device after finishing it.
 
-## User stories
-- I want to add new tasks
-- I want to change tasks status
-- I want to archive tasks
-- I want to edit tasks
-- I want to be able to resume my work after I close the application
-- I want to be able to resume my work in different place
+## Featuers
+- Add new tasks
+- Edit existing tasks
+- Change tasks status
+- Resume the work after finishing it
+- Resume the work from any device
+
+## Setup
+Before running the frontend make sure to run node server, by going into /RestApi directory and executing command
+```
+npm install
+node .
+```
+After that you can run frontend by goint into /Website directorry and executing command
+```
+npm install
+ng serve -o
+```
 
 ## Model
 ### Task

@@ -2,8 +2,9 @@
     <div class="task-top">
         <div class="task-top--text">{{ task.title }}</div>
         <div class="task-top--buttons-container">
+            <button class="task-top--button-red" (click)="deleteTask()"></button>
             <button class="task-top--button-gray" (click)="editTask()"></button>
-            <button class="task-top--button-red" (click)="moveTask('incomplete')"></button>
+            <button class="task-top--button-yellow" (click)="moveTask('incomplete')"></button>
             <button class="task-top--button-green" (click)="moveTask('complete')"></button>
             <button class="task-top--button-blue" (click)="moveTask('archived')"></button>
         </div>

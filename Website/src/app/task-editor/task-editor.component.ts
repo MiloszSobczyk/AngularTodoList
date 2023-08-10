@@ -37,5 +37,8 @@ export class TaskEditorComponent {
       this.taskService.updateTask(this.taskService.chosenTask!);
     }
   }
+  onCancel() {
+    this.taskService.switchEditPrompt();
+  }
 
 }

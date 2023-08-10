@@ -36,4 +36,8 @@ export class TaskCreatorComponent {
     }
   }
 
+  onCancel() {
+    this.taskService.switchCreatePrompt();
+  }
+
 }

@@ -16,8 +16,8 @@
 .task-creator
 {
     width: 50%;
-    height: 40%;
-    background-color: var(--primary);
+    height: 45%;
+    background: linear-gradient(90deg, rgba(9,81,203,1) 0%, rgba(0,193,255,1) 100%);
     border-radius: 1em;
     padding: 2em 3em 3em 3em;
     color: var(--text);
@@ -37,18 +37,17 @@
 
 label 
 {
+    margin: 0 0 1em 0;
     padding: 1em 0 0 0;
     font-size: 24px;
     text-align: center;
 }
 
-.submit-button 
+button
 {
     align-self: center;
     margin: 1em 0 0 0;
-    width: 50%;
-    background-color: #4CAF50;
-    color: var(--text);
+    width: 30%;
     border: none;
     border-radius: 1em;
     padding: 4px;
@@ -59,7 +58,26 @@ label
     transition: background-color 0.3s ease;
 }
 
+.submit-button 
+{
+    background-color: #9012c4;
+    color: var(--text);
+}
+
 .submit-button:hover
 {
-    background-color: #347836;
+    color: #9012c4;
+    background-color: var(--text);
+}
+
+.cancel-button 
+{
+    background-color: #d71919;
+    color: var(--text);
+}
+
+.cancel-button:hover
+{
+    color: #d71919;
+    background-color: var(--text);
 }

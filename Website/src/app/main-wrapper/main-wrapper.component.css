@@ -10,7 +10,7 @@
     align-self: center;
     margin: 0.5em 0 0 0;
     width: 15%;
-    background-color: var(--accent);
+    background-color: #9012c4;
     color: var(--text);
     border: none;
     border-radius: 1em;
@@ -26,5 +26,5 @@
 .create-button:hover
 {
     background-color: var(--text);
-    color: var(--accent);
+    color: #9012c4;
 }

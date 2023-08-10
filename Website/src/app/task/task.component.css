@@ -96,6 +96,38 @@
     background-color: rgb(117, 121, 129);
 }
 
+.task-top--button-yellow
+{
+    border: none;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    padding: 4px;
+    margin: 0 0 0 0.5em;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: rgb(255, 251, 0);
+}
+
+.task-top--button-red
+{
+    border: none;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    padding: 4px;
+    margin: 0 0 0 0.5em;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: rgb(255, 0, 0);
+}
+
 .task-bottom
 {
     width: 23vw;

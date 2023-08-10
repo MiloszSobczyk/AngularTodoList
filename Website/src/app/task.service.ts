@@ -61,7 +61,14 @@ export class TaskService {
     const body = JSON.stringify(task);
     this.http.post<Task>(`http://localhost:8080/tasks`, body, { 'headers': headers }).subscribe();
     this.tasks.push(task);
-    console.log(task);
+  }
+
+  async deleteTask(task: Task) {
+    this.http.delete(`http://localhost:8080/tasks/${task._id}`).subscribe();
+    const indexToRemove = this.tasks.indexOf(task);
+    if (indexToRemove !== -1) {
+      this.tasks.splice(indexToRemove, 1);
+    }
   }
 
   authorizeUser(inputPassword: String): Promise<boolean> {
