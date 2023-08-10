@@ -6,6 +6,12 @@ const PORT = 8080;
 require('dotenv/config');
 
 app.use(bodyParser.json());
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*'); // Ustawia na dowolny źródło (uwaga na bezpieczeństwo w produkcji)
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    next();
+});
 
 // Import Routes
 const tasksRoute = require('./routes/tasks');

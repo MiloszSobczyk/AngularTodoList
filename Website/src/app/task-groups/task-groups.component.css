@@ -1,0 +1,22 @@
+.task-groups-container
+{
+    height: calc(100vh - 3em);
+    background-color: var(--background);
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+    gap: 1em;
+}
+
+.task-group
+{
+    flex: 1;
+    max-width: 25vw;
+    padding: 1vw;
+    background-color: var(--primary);
+    border-radius: 1em; 
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    gap: 0.5em;
+}

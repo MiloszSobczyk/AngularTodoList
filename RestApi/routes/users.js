@@ -3,12 +3,12 @@ const router = express.Router();
 const User = require('../models/User')
 
 // get authorization
-router.get('/authorize/:userId', async (req, res) => {
+router.get('/authorize/:userId/:password', async (req, res) => {
     const user = await User.findOne({ id: req.body.userId }, 'password');
-    if(user.password === req.body.password)
-        res.sendStatus(200);
+    if(user.password === req.params.password)
+        res.json('accept');
     else
-        res.sendStatus(401);
+        res.json('reject');
 });
 
 // add user

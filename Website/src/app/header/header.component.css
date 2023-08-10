@@ -1,4 +1,4 @@
-.footer
+.header
 {
     height: 3em;
     width: 100%;
@@ -11,17 +11,17 @@
     font-size: 16px;
 }
 
-.footer--left-text
+.header--left-text
 {
     margin: 0 0 0 2em;
 }
 
-.footer--right-text
+.header--right-text
 {
     margin: 0 2em 0 0;
 }
 
-.footer--login-button 
+.header--login-button 
 {
     background-color: #4CAF50;
     color: var(--text);
@@ -37,12 +37,12 @@
     transition: background-color 0.3s ease;
 }
 
-.footer--login-button:hover 
+.header--login-button:hover 
 {
-    background-color: #45a049;
+    background-color: #347836;
 }
 
-.footer--register-button 
+.header--register-button 
 {
     background-color: #348feb;
     color: var(--text);
@@ -58,7 +58,7 @@
     transition: background-color 0.3s ease;
 }
 
-.footer--register-button:hover 
+.header--register-button:hover 
 {
     background-color: #245d96;
 }
